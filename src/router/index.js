@@ -20,6 +20,17 @@ const routes = [
     path: '/linker',
     name: 'linker',
     component: LinkerView
+  },
+  {
+    path: '/comp',
+    name:  'comp',
+    component: () => import(/* webpackChunkName: "about" */ '../views/ComView.vue')
+  },
+  {
+    path: '/design',
+    name:  'design',
+    component: () => import(/* webpackChunkName: "about" */ '../views/DesignView.vue'),
+
   }
 ]
 
