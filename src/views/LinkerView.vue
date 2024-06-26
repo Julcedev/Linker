@@ -43,7 +43,7 @@
   <AppBoxComponent v-for="(box, index) in boxes" :key="index" :boxnum="index" :name="box" :url="urls[index]" :tileId="box + boxCounter"></AppBoxComponent>
 </div>
 </div>
-<Wave>s</Wave>
+<Wave></Wave>
 
 </template>
 <style scoped>
