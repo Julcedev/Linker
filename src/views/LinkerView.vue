@@ -43,7 +43,7 @@
   <AppBoxComponent v-for="(box, index) in boxes" :key="index" :boxnum="index" :name="box" :url="urls[index]" :tileId="box + boxCounter"></AppBoxComponent>
 </div>
 </div>
-<Wave>s</Wave>
+<Wave></Wave>
 
 </template>
 <style scoped>
@@ -393,6 +393,16 @@ export default {
     else{
       this.isChecked = false //darkmode 
       this.checkStatus();
+    }
+    
+    if(localStorage.getItem('first') != 'true'){
+      if(localStorage.getItem('rightdir') != 'true'){
+        this.$router.push('/');
+      }
+      else{
+        window.alert("1. Clicke auf Edit bei der ersten box")
+        localStorage.setItem('first' , 'show')
+      }
     }
     this.boxes = localStorage.getItem('boxes').split(',');  //splices boxes and urls 
     this.urls = localStorage.getItem('urls').split(',');

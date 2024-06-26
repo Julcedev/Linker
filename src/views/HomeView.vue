@@ -179,6 +179,9 @@ import wave from '@/components/Wave.vue'
 export default {
   components: {
     wave
+  },
+  mounted(){
+    localStorage.setItem('rightdir', 'true')
   }
 }
 </script>

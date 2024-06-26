@@ -260,8 +260,16 @@ export default {
     edit() {
       this.isBoxVisible = true
       console.log('boxnum ' + this.boxnum)
+      if(localStorage.getItem('first') == 'show'){
+      window.alert("2. Passe die Link card an deien bedürfnisse an.")
+      localStorage.setItem('first' , 'fertig')
+    }
     },
     changesettings() {
+      if(localStorage.getItem('first') == 'fertig'){
+      window.alert("3. Super, du hast es geschafft.")
+      localStorage.setItem('first' , 'true')
+      }
       this.isBoxVisible = false
       if (this.nameinp != '') {
         this.boxes = localStorage.getItem('boxes').split(',');
