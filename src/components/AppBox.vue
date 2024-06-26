@@ -24,7 +24,7 @@
   <div class="card-border-top">
   </div>
   <div class="img">
-    <img id="img" :src="favurl" alt="Wrong URL">
+    <img id="img" :src="favurl" >
   </div>
   <span> {{ name }}</span>
   <a :href="formattedUrl()" class="job"> gehe zu {{ name }}</a>
@@ -235,6 +235,7 @@ export default {
       urlinp: '',
       nameinp: '',
       favurl: '',
+      preload: ''
     }
   },
   mounted() {
@@ -244,7 +245,6 @@ export default {
         url.search = '';
         url.hash = '';
         this.favurl=  url.toString();
-        return this.favurl;
       } catch (error) {
         console.error('Invalid URL:', error);
         return this.favurl = `https://${this.url}/favicon.ico`;

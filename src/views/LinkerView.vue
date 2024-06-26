@@ -43,7 +43,7 @@
   <AppBoxComponent v-for="(box, index) in boxes" :key="index" :boxnum="index" :name="box" :url="urls[index]" :tileId="box + boxCounter"></AppBoxComponent>
 </div>
 </div>
-
+<Wave>s</Wave>
 
 </template>
 <style scoped>
@@ -359,12 +359,14 @@ gap: 20px;
 </style>
 <script>
 import AppBoxComponent from '@/components/AppBox.vue';
+import Wave from '@/components/Wave.vue';
 import { registerRuntimeCompiler } from 'vue';
 
 export default {
   name: 'Linker',
   components: {
-    AppBoxComponent
+    AppBoxComponent,
+    Wave
   },
   data() {
     return {

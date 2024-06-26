@@ -49,6 +49,7 @@ body {
   justify-content: flex-end;
   align-items: flex-end;
   min-height: 100vh;
+  background-color: transparent;
 }
 
 .footer {
