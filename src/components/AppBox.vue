@@ -138,7 +138,7 @@ a {
 
 
 #editmenue {
-  position: fixed;
+  position: absolute;
   width: 200px;
   height: 300px;
   background-color: #3405a3;
