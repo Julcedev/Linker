@@ -15,7 +15,7 @@
       </div>
 
       <div class="center">
-        <button @click="changesettings" class="btn">Fetig</button>
+        <button @click="changesettings" class="btn">Change</button>
       </div>
     </div>
 
