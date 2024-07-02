@@ -27,7 +27,7 @@
     <img id="img" :src="favurl" >
   </div>
   <span> {{ name }}</span>
-  <a :href="formattedUrl()" class="job"> gehe zu {{ name }}</a>
+  <a :href="formattedUrl()" class="job"> go to {{ name }}</a>
   <button @click="edit"> Edit
   </button>
 </div>
